@@ -4,6 +4,7 @@ output: html_document
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(plotly)
+
 df <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv")
 df$hover <- with(df, paste(state, '<br>', "Beef", beef, "Dairy", dairy, "<br>",
                            "Fruits", total.fruits, "Veggies", total.veggies,
@@ -30,6 +31,7 @@ map <- plot_geo(df, locationmode = 'USA-states') %>%
   )
 
 ```
+
 
 # Interactive Map
 
